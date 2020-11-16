@@ -35,28 +35,28 @@
 # ------------------------------ CPLEX Solver ---------------------------------
 
 #==============================================================================
-# CPLEX solver - Dual simplex algorithm 
+# CPLEX solver - Simplex
 #==============================================================================
-cplex -c "read BigDual.mps" \
-"set threads 1" \
-"set preprocessing presolve yes" \
-"set simplex tolerances feasibility 1e-3" \
-"set lpmethod 1" \
-"primopt" \
-| tee output.txt
+#cplex -c "read BigDual.mps" \
+#"set threads 1" \
+#"set preprocessing presolve yes" \
+#"set simplex tolerances feasibility 1e-3" \
+#"set lpmethod 1" \
+#"primopt" \
+#| tee output.txt
 
 
 #==============================================================================
 # CPLEX solver - IPM algorithm with algorithm 2 and without crossover
 #==============================================================================
-# cplex -c "read BigDual.mps" \
-# "set barrier algorithm 2" \
-# "set barrier crossover -1" \
-# "set threads 1" \
-# "set preprocessing presolve no" \
-# "set barrier convergetol 1e-12" \
-# "baropt" \
-# | tee output.txt
+cplex -c "read BigDual.mps" \
+"set barrier algorithm 2" \
+"set barrier crossover -1" \
+"set threads 1" \
+"set preprocessing presolve no" \
+"set barrier convergetol 1e-12" \
+"baropt" \
+| tee output.txt
 
 
 
