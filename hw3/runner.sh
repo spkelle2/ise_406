@@ -4,14 +4,14 @@
 #==============================================================================
 # Mosek solver - Simplex
 #==============================================================================
-#mosek -d MSK_IPAR_OPTIMIZER MSK_OPTIMIZER_DUAL_SIMPLEX \
-#-d MSK_DPAR_SIMPLEX_ABS_TOL_PIV 1e-3 \
-#-d MSK_IPAR_PRESOLVE_USE MSK_PRESOLVE_MODE_OFF \
-#-d MSK_IPAR_NUM_THREADS 1 \
-#BigDual.mps \
-#| tee output.txt
+mosek -d MSK_IPAR_OPTIMIZER MSK_OPTIMIZER_DUAL_SIMPLEX \
+-d MSK_DPAR_SIMPLEX_ABS_TOL_PIV 1e-3 \
+-d MSK_IPAR_PRESOLVE_USE MSK_PRESOLVE_MODE_OFF \
+-d MSK_IPAR_NUM_THREADS 1 \
+BigDual.mps \
+| tee output.txt
 
-# MSK_OPTIMIZER_DUAL_SIMPLEX MSK_OPTIMIZER_PRIMAL_SIMPLEX
+#MSK_OPTIMIZER_DUAL_SIMPLEX MSK_OPTIMIZER_PRIMAL_SIMPLEX
 
 
 #==============================================================================
@@ -77,15 +77,15 @@
 #==============================================================================
 # GUROBI solver - IPM algorithm with BarHomogeneous and disabled crossover
 #==============================================================================
-gurobi_cl Method=2 \
-#BarHomogeneous=1 \
-Crossover=-1 \
-Presolve=0 \
-Threads=1 \
-FeasibilityTol=1e-3 \
-BarConvTol=1e-12 \
-ResultFile=result.sol \
-BigDual.mps \
-| tee output.txt
+#gurobi_cl Method=2 \
+##BarHomogeneous=1 \
+#Crossover=-1 \
+#Presolve=0 \
+#Threads=1 \
+#FeasibilityTol=1e-3 \
+#BarConvTol=1e-12 \
+#ResultFile=result.sol \
+#BigDual.mps \
+#| tee output.txt
 
 
