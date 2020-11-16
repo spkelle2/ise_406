@@ -39,8 +39,8 @@
 #==============================================================================
 cplex -c "read BigDual.mps" \
 "set threads 1" \
-"set preprocessing presolve no" \
-"set simplex tolerances feasibility 1e-4" \
+"set preprocessing presolve yes" \
+"set simplex tolerances feasibility 1e-3" \
 "set lpmethod 2" \
 "primopt" \
 | tee output.txt
@@ -52,7 +52,7 @@ cplex -c "read BigDual.mps" \
 # cplex -c "read BigDual.mps" \
 # "set barrier algorithm 2" \
 # "set barrier crossover -1" \
-# "set threads 10" \
+# "set threads 1" \
 # "set preprocessing presolve no" \
 # "set barrier convergetol 1e-12" \
 # "baropt" \
@@ -68,7 +68,7 @@ cplex -c "read BigDual.mps" \
 # gurobi_cl Method=0 \
 # Presolve=0 \
 # Threads=1 \
-# FeasibilityTol=1e-9 \
+# FeasibilityTol=1e-3 \
 # ResultFile=result.sol \
 # BigDual.mps \
 # | tee output.txt 
@@ -82,8 +82,8 @@ cplex -c "read BigDual.mps" \
 # Crossover=0 \
 # Presolve=0 \
 # Threads=1 \
-# FeasibilityTol=1e-2 \
-# BarConvTol=1e-3 \
+# FeasibilityTol=1e-3 \
+# BarConvTol=1e-12 \
 # ResultFile=result.sol \
 # BigDual.mps \
 # | tee output.txt 
