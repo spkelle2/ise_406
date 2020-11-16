@@ -1,2 +1,8 @@
 *.mps
 *.bas
+*.pdf
+*.ipynb
+.idea/
+hw1/
+hw2/
+sek519-BHW1/

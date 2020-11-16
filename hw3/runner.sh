@@ -4,27 +4,27 @@
 #==============================================================================
 # Mosek solver - Dual simplex algorithm
 #==============================================================================
-mosek -d MSK_IPAR_OPTIMIZER MSK_OPTIMIZER_DUAL_SIMPLEX \
--d MSK_DPAR_SIMPLEX_ABS_TOL_PIV 1e-3 \
--d MSK_IPAR_PRESOLVE_USE MSK_PRESOLVE_MODE_OFF \
--d MSK_IPAR_NUM_THREADS 1 \
-BigDual.mps \
-| tee output.txt
+#mosek -d MSK_IPAR_OPTIMIZER MSK_OPTIMIZER_DUAL_SIMPLEX \
+#-d MSK_DPAR_SIMPLEX_ABS_TOL_PIV 1e-3 \
+#-d MSK_IPAR_PRESOLVE_USE MSK_PRESOLVE_MODE_OFF \
+#-d MSK_IPAR_NUM_THREADS 1 \
+#BigDual.mps \
+#| tee output.txt
 
 
 #==============================================================================
 # Mosek solver - IPM algorithm without crossover
 #==============================================================================
-# mosek -d MSK_IPAR_OPTIMIZER MSK_OPTIMIZER_INTPNT \
-# -d MSK_IPAR_INTPNT_BASIS MSK_BI_NEVER \
-# -d MSK_DPAR_INTPNT_TOL_DFEAS 1e-3 \
-# -d MSK_DPAR_INTPNT_TOL_PFEAS 1e-3 \
-# -d MSK_DPAR_SIMPLEX_ABS_TOL_PIV 1e-3 \
-# -d MSK_DPAR_INTPNT_TOL_REL_GAP 1e-12 \
-# -d MSK_IPAR_PRESOLVE_USE MSK_PRESOLVE_MODE_OFF \
-# -d MSK_IPAR_NUM_THREADS 1 \
-# BigDual.mps \
-# | tee output.txt
+mosek -d MSK_IPAR_OPTIMIZER MSK_OPTIMIZER_INTPNT \
+-d MSK_IPAR_INTPNT_BASIS MSK_BI_NEVER \
+-d MSK_DPAR_INTPNT_TOL_DFEAS 1e-3 \
+-d MSK_DPAR_INTPNT_TOL_PFEAS 1e-3 \
+-d MSK_DPAR_SIMPLEX_ABS_TOL_PIV 1e-3 \
+-d MSK_DPAR_INTPNT_TOL_REL_GAP 1e-12 \
+-d MSK_IPAR_PRESOLVE_USE MSK_PRESOLVE_MODE_OFF \
+-d MSK_IPAR_NUM_THREADS 1 \
+BigDual.mps \
+| tee output.txt
 
 
 
