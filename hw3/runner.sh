@@ -47,11 +47,11 @@
 
 
 #==============================================================================
-# CPLEX solver - IPM algorithm with algorithm 2 and without crossover
+# CPLEX solver - IPM
 #==============================================================================
 cplex -c "read BigDual.mps" \
 "set barrier algorithm 2" \
-"set barrier crossover -1" \
+"set barrier crossover 0" \
 "set threads 1" \
 "set preprocessing presolve no" \
 "set barrier convergetol 1e-12" \
