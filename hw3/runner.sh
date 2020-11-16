@@ -49,14 +49,14 @@
 #==============================================================================
 # CPLEX solver - IPM
 #==============================================================================
-cplex -c "read BigPrimal.mps" \
-"set barrier algorithm 2" \
-"set barrier crossover -1" \
-"set threads 1" \
-"set preprocessing presolve no" \
-"set barrier convergetol 1e-12" \
-"baropt" \
-| tee output.txt
+#cplex -c "read BigPrimal.mps" \
+#"set barrier algorithm 2" \
+#"set barrier crossover -1" \
+#"set threads 1" \
+#"set preprocessing presolve no" \
+#"set barrier convergetol 1e-12" \
+#"baropt" \
+#| tee output.txt
 
 
 
@@ -65,13 +65,13 @@ cplex -c "read BigPrimal.mps" \
 #==============================================================================
 # GUROBI solver - Primal simplex algorithm
 #==============================================================================
-#gurobi_cl Method=1 \
-#Presolve=0 \
-#Threads=1 \
-#FeasibilityTol=1e-3 \
-#ResultFile=result.sol \
-#BigDual.mps \
-#| tee output.txt
+gurobi_cl Method=1 \
+Presolve=0 \
+Threads=1 \
+FeasibilityTol=1e-3 \
+ResultFile=result.sol \
+BigPrimal.mps \
+| tee output.txt
 
 
 #==============================================================================
