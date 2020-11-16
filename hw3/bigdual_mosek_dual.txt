@@ -1,0 +1,73 @@
+
+MOSEK Version 8.1.0.72 (Build date: 2018-12-18 10:56:33)
+Copyright (c) MOSEK ApS, Denmark. WWW: mosek.com
+Platform: Linux/64-X86
+
+Open file 'BigDual.mps'
+Reading started.
+Using 'COST' as objective vector
+Read 6000006 number of A nonzeros in 3.80 seconds.
+Using 'RHS' as rhs vector
+Reading terminated. Time: 5.98
+
+Read summary
+  Type             : LO (linear optimization problem)
+  Objective sense  : min
+  Scalar variables : 6           
+  Matrix variables : 0           
+  Constraints      : 1000000     
+  Cones            : 0           
+  Time             : 6.0     
+
+Problem
+  Name                   : GENERIC         
+  Objective sense        : min             
+  Type                   : LO (linear optimization problem)
+  Constraints            : 1000000         
+  Cones                  : 0               
+  Scalar variables       : 6               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer started.
+Simplex optimizer started.
+Dual simplex optimizer started.
+Dual simplex optimizer setup started.
+Dual simplex optimizer setup terminated.
+Optimizer  - solved problem         : the dual        
+Optimizer  - Constraints            : 6               
+Optimizer  - Scalar variables       : 1000000           conic                  : 0               
+Optimizer  - hotstart               : no              
+ITER      DEGITER(%)  PFEAS       DFEAS       POBJ                  DOBJ                  TIME      TOTTIME 
+0         0.00        2.60e+05    NA          3.1129970307e+03      NA                    0.99      4.25    
+60        1.64        0.00e+00    NA          2.4580497877e+03      NA                    14.95     18.20   
+Dual simplex optimizer terminated.
+Simplex optimizer terminated. Time: 19.57. 
+
+Optimizer terminated. Time: 19.57   
+
+
+Basic solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 2.4580497877e+03    nrm: 4e+02    Viol.  con: 8e-09    var: 0e+00  
+  Dual.    obj: 2.4580497877e+03    nrm: 9e+01    Viol.  con: 0e+00    var: 6e-14  
+
+Optimizer summary
+  Optimizer                 -                        time: 19.57   
+    Interior-point          - iterations : 0         time: 0.00    
+      Basis identification  -                        time: 0.00    
+        Primal              - iterations : 0         time: 0.00    
+        Dual                - iterations : 0         time: 0.00    
+        Clean primal        - iterations : 0         time: 0.00    
+        Clean dual          - iterations : 0         time: 0.00    
+    Simplex                 -                        time: 19.57   
+      Primal simplex        - iterations : 0         time: 0.00    
+      Dual simplex          - iterations : 60        time: 14.95   
+    Mixed integer           - relaxations: 0         time: 0.00    
+
+Open file 'BigDual.bas'
+Start writing.
+done writing. Time: 6.06
+
+Return code - 0  [MSK_RES_OK]

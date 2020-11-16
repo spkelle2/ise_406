@@ -1,0 +1,98 @@
+
+MOSEK Version 8.1.0.72 (Build date: 2018-12-18 10:56:33)
+Copyright (c) MOSEK ApS, Denmark. WWW: mosek.com
+Platform: Linux/64-X86
+
+Open file 'BigDual.mps'
+Reading started.
+Using 'COST' as objective vector
+Read 6000006 number of A nonzeros in 3.39 seconds.
+Using 'RHS' as rhs vector
+Reading terminated. Time: 5.44
+
+Read summary
+  Type             : LO (linear optimization problem)
+  Objective sense  : min
+  Scalar variables : 6           
+  Matrix variables : 0           
+  Constraints      : 1000000     
+  Cones            : 0           
+  Time             : 5.4     
+
+Problem
+  Name                   : GENERIC         
+  Objective sense        : min             
+  Type                   : LO (linear optimization problem)
+  Constraints            : 1000000         
+  Cones                  : 0               
+  Scalar variables       : 6               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer started.
+Problem
+  Name                   : GENERIC         
+  Objective sense        : min             
+  Type                   : LO (linear optimization problem)
+  Constraints            : 1000000         
+  Cones                  : 0               
+  Scalar variables       : 6               
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 1               
+Optimizer  - solved problem         : the dual        
+Optimizer  - Constraints            : 6
+Optimizer  - Cones                  : 0
+Optimizer  - Scalar variables       : 1000006           conic                  : 0               
+Optimizer  - Semi-definite variables: 0                 scalarized             : 0               
+Factor     - setup time             : 2.15              dense det. time        : 0.00            
+Factor     - ML order time          : 0.00              GP order time          : 0.00            
+Factor     - nonzeros before factor : 21                after factor           : 21              
+Factor     - dense dim.             : 0                 flops                  : 5.60e+07        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   2.3e+01  1.6e+05  4.6e+06  1.00e+00   0.000000000e+00   1.037179281e+08   1.0e+00  3.81  
+1   1.0e+02  1.6e+05  4.6e+06  0.00e+00   2.464291517e+03   5.606729915e+06   1.1e+02  4.72  
+2   4.0e+01  6.4e+04  1.8e+06  1.72e+00   2.516377203e+03   5.704854312e+05   4.3e+01  5.81  
+3   4.0e+01  6.3e+04  1.8e+06  5.16e+00   2.510047333e+03   5.555286609e+05   4.3e+01  6.64  
+4   6.9e+00  1.1e+04  3.2e+05  4.98e+00   2.464637729e+03   3.087946441e+04   7.6e+00  7.77  
+5   4.1e+00  6.5e+03  1.9e+05  1.40e+00   2.462849384e+03   1.772616918e+04   4.4e+00  8.62  
+6   7.4e-01  1.2e+03  3.4e+04  1.22e+00   2.461520242e+03   4.976694501e+03   8.0e-01  9.69  
+7   6.4e-01  1.0e+03  3.0e+04  1.13e+00   2.459528128e+03   4.609837814e+03   7.0e-01  10.76 
+8   5.3e-01  8.6e+02  2.5e+04  1.09e+00   2.459273173e+03   4.238938155e+03   5.8e-01  11.82 
+9   2.6e-01  4.1e+02  1.2e+04  1.04e+00   2.458907111e+03   3.302732006e+03   2.8e-01  12.67 
+10  9.5e-02  1.5e+02  4.4e+03  1.05e+00   2.458211227e+03   2.760341748e+03   1.0e-01  13.54 
+11  3.3e-02  5.4e+01  1.5e+03  1.14e+00   2.458606716e+03   2.566620947e+03   3.6e-02  14.64 
+12  2.2e-03  3.5e+00  1.0e+02  1.04e+00   2.458073970e+03   2.465005135e+03   2.4e-03  15.51 
+13  1.2e-06  2.0e-03  5.8e-02  1.00e+00   2.458049793e+03   2.458053728e+03   1.3e-06  16.38 
+14  3.9e-08  6.2e-05  1.8e-03  1.00e+00   2.458049788e+03   2.458049911e+03   4.2e-08  17.24 
+15  8.0e-09  1.3e-05  3.7e-04  1.00e+00   2.458049788e+03   2.458049813e+03   8.6e-09  18.09 
+16  8.7e-11  4.9e-06  5.3e-05  1.00e+00   2.458049788e+03   2.458049784e+03   9.1e-11  18.94 
+17  3.2e-12  2.8e-07  5.6e-06  1.00e+00   2.458049788e+03   2.458049787e+03   9.1e-15  19.63 
+Optimizer terminated. Time: 19.99   
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 2.4580497878e+03    nrm: 4e+02    Viol.  con: 3e-13    var: 1e-17  
+  Dual.    obj: 2.4580497874e+03    nrm: 9e+01    Viol.  con: 0e+00    var: 5e-08  
+
+Optimizer summary
+  Optimizer                 -                        time: 19.99   
+    Interior-point          - iterations : 17        time: 19.89   
+      Basis identification  -                        time: 0.00    
+        Primal              - iterations : 0         time: 0.00    
+        Dual                - iterations : 0         time: 0.00    
+        Clean primal        - iterations : 0         time: 0.00    
+        Clean dual          - iterations : 0         time: 0.00    
+    Simplex                 -                        time: 0.00    
+      Primal simplex        - iterations : 0         time: 0.00    
+      Dual simplex          - iterations : 0         time: 0.00    
+    Mixed integer           - relaxations: 0         time: 0.00    
+
+Open file 'BigDual.sol'
+Start writing.
+done writing. Time: 6.30
+
+Return code - 0  [MSK_RES_OK]
