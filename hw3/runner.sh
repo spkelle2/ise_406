@@ -51,7 +51,7 @@
 #==============================================================================
 cplex -c "read BigPrimal.mps" \
 "set barrier algorithm 2" \
-"set barrier crossover 0" \
+"set barrier crossover -1" \
 "set threads 1" \
 "set preprocessing presolve no" \
 "set barrier convergetol 1e-12" \
