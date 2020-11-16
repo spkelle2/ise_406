@@ -37,26 +37,26 @@
 #==============================================================================
 # CPLEX solver - Simplex
 #==============================================================================
-cplex -c "read BigPrimal.mps" \
-"set threads 1" \
-"set preprocessing presolve yes" \
-"set simplex tolerances feasibility 1e-3" \
-"set lpmethod 1" \
-"primopt" \
-| tee output.txt
+#cplex -c "read BigPrimal.mps" \
+#"set threads 1" \
+#"set preprocessing presolve yes" \
+#"set simplex tolerances feasibility 1e-3" \
+#"set lpmethod 1" \
+#"primopt" \
+#| tee output.txt
 
 
 #==============================================================================
 # CPLEX solver - IPM
 #==============================================================================
-#cplex -c "read BigDual.mps" \
-#"set barrier algorithm 2" \
-#"set barrier crossover 0" \
-#"set threads 1" \
-#"set preprocessing presolve no" \
-#"set barrier convergetol 1e-12" \
-#"baropt" \
-#| tee output.txt
+cplex -c "read BigPrimal.mps" \
+"set barrier algorithm 2" \
+"set barrier crossover 0" \
+"set threads 1" \
+"set preprocessing presolve no" \
+"set barrier convergetol 1e-12" \
+"baropt" \
+| tee output.txt
 
 
 
