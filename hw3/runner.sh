@@ -78,8 +78,8 @@
 # GUROBI solver - IPM algorithm with BarHomogeneous and disabled crossover
 #==============================================================================
 gurobi_cl Method=2 \
-BarHomogeneous=1 \
-Crossover=0 \
+#BarHomogeneous=1 \
+Crossover=-1 \
 Presolve=0 \
 Threads=1 \
 FeasibilityTol=1e-3 \
