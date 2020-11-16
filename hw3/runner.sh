@@ -41,7 +41,7 @@ cplex -c "read BigDual.mps" \
 "set threads 1" \
 "set preprocessing presolve yes" \
 "set simplex tolerances feasibility 1e-3" \
-"set lpmethod 2" \
+"set lpmethod 1" \
 "primopt" \
 | tee output.txt
 
