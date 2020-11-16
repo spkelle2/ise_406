@@ -65,27 +65,27 @@
 #==============================================================================
 # GUROBI solver - Primal simplex algorithm
 #==============================================================================
-gurobi_cl Method=1 \
-Presolve=0 \
-Threads=1 \
-FeasibilityTol=1e-3 \
-ResultFile=result.sol \
-BigPrimal.mps \
-| tee output.txt
+#gurobi_cl Method=1 \
+#Presolve=0 \
+#Threads=1 \
+#FeasibilityTol=1e-3 \
+#ResultFile=result.sol \
+#BigPrimal.mps \
+#| tee output.txt
 
 
 #==============================================================================
 # GUROBI solver - IPM algorithm with BarHomogeneous and disabled crossover
 #==============================================================================
-#gurobi_cl Method=2 \
-##BarHomogeneous=1 \
-#Crossover=-1 \
-#Presolve=0 \
-#Threads=1 \
-#FeasibilityTol=1e-3 \
-#BarConvTol=1e-12 \
-#ResultFile=result.sol \
-#BigDual.mps \
-#| tee output.txt
+gurobi_cl Method=2 \
+BarHomogeneous=1 \
+Crossover=0 \
+Presolve=0 \
+Threads=1 \
+FeasibilityTol=1e-3 \
+BarConvTol=1e-12 \
+ResultFile=result.sol \
+BigPrimal.mps \
+| tee output.txt
 
 
