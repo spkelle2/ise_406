@@ -65,7 +65,7 @@
 #==============================================================================
 # GUROBI solver - Primal simplex algorithm
 #==============================================================================
-gurobi_cl Method=0 \
+gurobi_cl Method=1 \
 Presolve=0 \
 Threads=1 \
 FeasibilityTol=1e-3 \
